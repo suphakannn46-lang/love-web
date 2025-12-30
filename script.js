@@ -18,17 +18,20 @@ function changeText() {
   step++;
 }
 
-// ===== slider รูปคู่ =====
+/* ===== slider รูปคู่ (เวอร์ชัน responsive) ===== */
 document.addEventListener("DOMContentLoaded", () => {
   let index = 0;
   const slides = document.querySelector(".slides");
   const images = document.querySelectorAll(".slides img");
-  const total = images.length;
-  const width = 280;
+  const slider = document.querySelector(".slider");
+
+  if (!slides || images.length === 0) return;
 
   setInterval(() => {
     index++;
-    if (index >= total) index = 0;
-    slides.style.transform = `translateX(${-width * index}px)`;
+    if (index >= images.length) index = 0;
+
+    const sliderWidth = slider.offsetWidth;
+    slides.style.transform = `translateX(${-sliderWidth * index}px)`;
   }, 2500);
 });
