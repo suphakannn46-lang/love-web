@@ -16,4 +16,34 @@ function changeText() {
   }
 
   step++;
+
+}
+/* รูป ส.ค.ส. */
+.card-photo {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 20px;
+  margin: 15px auto;
+  display: block;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* Slider */
+.slider {
+  width: 280px;
+  overflow: hidden;
+  margin: 20px auto;
+  border-radius: 20px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.slides img {
+  width: 280px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 20px;
 }
